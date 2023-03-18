@@ -1,0 +1,428 @@
+@font-face {
+  font-family: philosopher;
+  src: url(../fonts/Philosopher-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style-type: none;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  max-width: 1210px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  background-color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 5px 10px -5px black;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-right-menus {
+  margin-right: 40px;
+  transition: 0.5s;
+}
+.nav-right-menus ul {
+  display: flex;
+}
+.nav-right-menus li {
+  padding-left: 53px;
+}
+.nav-right-menus a {
+  position: relative;
+  font-family: philosopher;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.85);
+  /* transition: 0.5s; */
+}
+.nav-right-menus a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #01bab3;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.nav-right-menus a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+.nav-right-btns a {
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 3px 10px;
+  font-family: philosopher;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 14px;
+  color: rgba(0, 0, 0, 0.65);
+}
+.openanacc {
+  margin: 0 25px;
+}
+.hamburger,
+.close {
+  display: none;
+}
+main {
+  background: #f4f8fa;
+  padding-bottom: 50px;
+}
+.input-box {
+  margin: 0 auto;
+  max-width: 570px;
+  padding: 76px;
+}
+.input-head-title {
+  text-align: center;
+}
+.input-head-title h1 {
+  margin: 24px 0 16px;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 29px;
+  line-height: 39px;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.input-head-title span {
+  margin-right: 15px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #444150;
+}
+.input-head-title a {
+  position: relative;
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+  color: #01bab3;
+}
+.input-head-title a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  border-radius: 4px;
+  background-color: #01bab3;
+  bottom: 0;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+.input-head-title a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+label {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  color: #444150;
+  cursor: pointer;
+}
+*::placeholder {
+  font-family: Philosopher;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+  color: #444150;
+  opacity: 0.5;
+}
+input:focus {
+  outline: 2px solid #01bab3;
+}
+input,
+select {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444150;
+}
+.email {
+  margin-top: 39px;
+}
+.email label {
+  display: block;
+}
+.email input {
+  width: 100%;
+  margin-top: 10px;
+  margin-top: 10px;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.phone {
+  margin-top: 24px;
+}
+.phone label {
+  display: block;
+}
+.phone-box {
+  display: flex;
+}
+.klmn {
+  width: 15%;
+  margin-top: 10px;
+  margin-top: 10px;
+  padding: 14px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+.klm {
+  width: 85%;
+  margin-top: 10px;
+  margin-top: 10px;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.country-city {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+}
+.country,
+.city {
+  width: 200px;
+}
+.country label {
+  display: block;
+}
+.country select {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.country select option {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #444150;
+}
+.country select:focus {
+  outline: 2px solid #01bab3;
+}
+.city label {
+  display: block;
+}
+.city input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.password {
+  margin-top: 24px;
+}
+.password label {
+  display: inline-block;
+}
+.password img {
+  width: 20px;
+}
+.password input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.password {
+  position: relative;
+}
+.password i {
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+}
+.confirm-password {
+  margin-top: 24px;
+}
+.confirm-password label {
+  display: block;
+}
+.confirm-password input {
+  margin-top: 10px;
+  width: 100%;
+  padding: 14px 0 14px 16px;
+  background: white;
+  border: 1px solid #d9d9d9;
+  border-radius: 6px;
+}
+.confirm-password input:focus {
+  outline: 2px solid #fb3838;
+}
+.register-btn {
+  margin-top: 90px;
+}
+.register-btn button {
+  width: 100%;
+  padding: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: #01bab3;
+  border-radius: 4px;
+}
+
+.register-btn button {
+  font-family: "Segoe UI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+}
+.end {
+  margin-top: 25px;
+}
+.end p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
+  color: #778699;
+}
+.end a {
+  color: #01bab3;
+}
+@media (max-width: 800px) {
+  .nav-right-menus {
+    flex-direction: column;
+    position: fixed;
+    left: -100%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(8px);
+  }
+  .nav-right-menus ul {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 100px;
+  }
+  .nav-right-menus li {
+    padding: 0;
+  }
+  .nav-right-menus a {
+    font-size: 30px;
+    font-weight: 900;
+  }
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+  .hamburger,
+  .close {
+    display: block;
+    border: none;
+    background: none;
+  }
+  .hamburger img {
+    width: 30px;
+  }
+  .close img {
+    width: 35px;
+  }
+}
+
+@media (max-width: 600px) {
+  .nav-left img {
+    width: 80px;
+  }
+  .openanacc {
+    margin: 0 5px;
+  }
+  main {
+    padding: 0;
+  }
+  .input-box {
+    padding: 40px;
+    width: 100%;
+    border: none;
+    border-radius: 0;
+  }
+  .phone {
+    margin-top: 30px;
+  }
+.country-city {
+    margin-top: 30px;
+    flex-direction: column;
+}
+.country, .city {
+    width: 100%;
+}
+.city {
+    margin-top: 30px;
+}
+.password, .confirm-password {
+    margin-top: 30px;
+}
+}

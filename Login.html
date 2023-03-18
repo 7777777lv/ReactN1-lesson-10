@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../css/login.css" />
+    <link rel="icon" href="../images/by-logo.svg" />
+  </head>
+  <body>
+    <header>
+      <nav class="container navbar">
+        <div class="nav-left">
+          <img src="../images/by-logo.png" alt="" />
+        </div>
+        <div class="nav-right">
+          <div class="nav-right-menus" id="navbar-responsive">
+            <ul>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contacts</a></li>
+              <button class="close" id="navbar-close"><img src="../images/close.png" alt=""></button>
+            </ul>
+          </div>
+          <div class="nav-right-btns">
+            <a href="./Login.html">Log in</a>
+            <a href="./second-step.html" class="openanacc">Open an account</a>
+            <a href="#">EN</a>
+          </div>
+        </div>
+        <button class="hamburger" id="navbar-open"><img src="../images/hamburger.png" alt=""></button>
+      </nav>
+    </header>
+    <main>
+      <div class="input-box">
+        <div class="input-head-title">
+          <img src="../images/by-logo.png" alt="" />
+          <h1>Welcome to ByTrend!</h1>
+          <span>Already have an account?</span>
+          <a href="#">Log in</a>
+        </div>
+        <form action="#">
+          <div class="email">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="Email address"
+              required
+              name="email"
+            />
+          </div>
+          <div class="password">
+            <label for="password">Password</label> <img src="../images/help.svg" alt="">
+            <input
+              type="password"
+              id="password"
+              required
+              placeholder="********"
+              name="password"
+            />
+            <i class="bi bi-eye-slash" id="togglePassword"></i>
+          </div>
+          <div class="continue">
+            <button type="submit" formaction="#">
+              Continue
+              <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24">
+                <path
+                  d="m17.5 16.5-1.425-1.4 2.1-2.1H3v-2h15.175L16.1 8.9l1.425-1.4L22 12Z"
+                />
+              </svg>
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="end">
+        <p>©2020 All Rights Reserved. Lorem Technologies, Inc.</p>
+      </div>
+    </main>
+    <script src="../js/style.js"></script>
+    <script src="../js/responsive.js"></script>
+  </body>
+</html>
